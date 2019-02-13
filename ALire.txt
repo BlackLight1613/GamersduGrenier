@@ -1,5 +1,2 @@
 1) Mise en place du fichier ALire
 2) Création des branches
-3) Ajout des fichiers venant des branches guillaume et anthony
-4) Vérification du resultat => OK 
-5) Vérification des codes => Erreur sur fichier HTML de la branche anthony
