@@ -6,15 +6,15 @@ toto karim
 
 -------------------------------------------------------
 Zone de travail Guillaume
-1
-2
-3
-4
-5
-6
-7
-8
-9
+1 Je suis vraiment super content de pouvoir travailler avec Anthony mon héros.
+2 C'est bien mieux que de bosser avec Karim.
+3 Il apprécie mes compétences et mes qualités.
+4 Git c'est trop bien.
+5 Je me demande ce que ça ferait si j'allais écrire dans la partie à Anthony ???
+6 Rien de dit qu'il soit content si jamais je le faisais...
+7 J'ai rien de mieux à dire...
+8 J'ai faim.
+9 Il est quelle heure déjà ???
 --------------------------------------------------------
 Zone de travail Anthony
 1
