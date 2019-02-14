@@ -20,7 +20,7 @@ public class Infrastructure {
 		this.cours = cours;
 	}
 
-	
+	//--------------------------------------------------------------------------------------------------------------
 
 	/**
 	 * @return le type
@@ -36,7 +36,23 @@ public class Infrastructure {
 		return disponible;
 	}
 
-	
+
+	/**
+	 * @return the lieu
+	 */
+	public String getLieu() {
+		return lieu;
+	}
+
+
+	/**
+	 * @return the cours
+	 */
+	public Cours getCours() {
+		return cours;
+	}
+
+	//--------------------------------------------------------------------------------------------------------------
 
 	/**
 	 * @param type le type à ajouté
@@ -52,12 +68,36 @@ public class Infrastructure {
 		this.disponible = disponible;
 	}
 
+	
 
+	//--------------------------------------------------------------------------------------------------------------
+	
+	/**
+	 * @param lieu le lieu à ajouter
+	 */
+	public void setLieu(String lieu) {
+		this.lieu = lieu;
+	}
+
+	/**
+	 * @param cours le cours à ajouter
+	 */
+	public void setCours(Cours cours) {
+		this.cours = cours;
+	}
 
 	@Override
 	public String toString() {
-		return "Infrastructure [type=" + type + ", lieu=" + lieu + ", disponible=" + disponible + ", cours=" + cours
-				+ "]";
+		String msg ="";
+		msg = "L'infrastructure est de type " + type + ", se trouve sur le  lieu " + lieu +" ";
+		if (disponible) {
+			msg = msg + "disponible ";
+		}
+		else {
+			msg = msg + "indisponible ";
+		}
+		msg = msg + "pour le cours "+cours+".";
+		return msg;
 	}
 	
 	
