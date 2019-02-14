@@ -1,10 +1,11 @@
-package metier;
+package business;
 
 public class Infrastructure {
 	
-	private String nom;
 	private String type;
+	private String lieu;
 	private boolean disponible;
+	private Cours cours;
 	
 	/** Constructeur infrastructure 
 	 * 
@@ -12,18 +13,14 @@ public class Infrastructure {
 	 * @param type Type de l'infrastructure
 	 * @param disponible Si l'infrastructure est disponible ou non
 	 */
-	public Infrastructure (String nom, String type, boolean disponible) {
-		this.nom = nom;
+	public Infrastructure (String type, String lieu, boolean disponible, Cours cours) {
 		this.type = type;
+		this.lieu = lieu;
 		this.disponible = disponible;
+		this.cours = cours;
 	}
 
-	/**
-	 * @return le nom
-	 */
-	public String getNom() {
-		return nom;
-	}
+	
 
 	/**
 	 * @return le type
@@ -39,12 +36,7 @@ public class Infrastructure {
 		return disponible;
 	}
 
-	/**
-	 * @param nom le nom à ajouté
-	 */
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
+	
 
 	/**
 	 * @param type le type à ajouté
@@ -58,6 +50,14 @@ public class Infrastructure {
 	 */
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
+	}
+
+
+
+	@Override
+	public String toString() {
+		return "Infrastructure [type=" + type + ", lieu=" + lieu + ", disponible=" + disponible + ", cours=" + cours
+				+ "]";
 	}
 	
 	

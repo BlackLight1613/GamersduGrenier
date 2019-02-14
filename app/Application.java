@@ -3,6 +3,9 @@ package app;
 import java.time.LocalDate;
 
 import business.Box;
+import business.Cheval;
+import business.Cours;
+import business.Infrastructure;
 
 public class Application 
 {
@@ -13,7 +16,7 @@ public class Application
 			Box box = new Box(10,"Fond");
 			Cheval cheval = new Cheval("Ponpon","PurSang","Etalon",box);
 			Cours cours = new Cours (cheval,LocalDate.now());
-			Infrastructure infra = new Infrastructure(10,"Quai 9-3/4","Carrière",true,cours);
+			Infrastructure infra = new Infrastructure("Quai 9-3/4","Carrière",true,cours);
 			
 			System.out.println(box);
 			System.out.println(cheval);

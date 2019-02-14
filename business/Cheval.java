@@ -1,10 +1,11 @@
-package metier;
+package business;
 
 public class Cheval {
 	
 	private String nom;
 	private String race;
 	private String genre;
+	private Box box;
 	
 	
 	/** Constructeur cheval
@@ -13,7 +14,7 @@ public class Cheval {
 	 * @param race Race du cheval (Pur Sang Arabe, Camargue, Cob Normand...)
 	 * @param genre Genre du cheval (Hongre, étalon, jument)
 	 */
-	public Cheval(String nom, String race, String genre) {
+	public Cheval(String nom, String race, String genre, Box box) {
 		this.nom = nom;
 		this.race = race;
 		this.genre = genre;
@@ -72,6 +73,12 @@ public class Cheval {
 		String msg ="";
 		msg = "Le cheval marche au pas.";
 		return msg;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Cheval [nom=" + nom + ", race=" + race + ", genre=" + genre + ", box=" + box + "]";
 	}
 	
 	
