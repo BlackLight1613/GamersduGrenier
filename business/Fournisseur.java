@@ -16,12 +16,11 @@ public class Fournisseur {
 	 * @param contactFour
 	 * @param numTelFour
 	 */
-	public Fournisseur(String nomFour, String contactFour, String numTelFour, Produit produit) {
+	public Fournisseur(String nomFour, String contactFour, String numTelFour) {
 		super();
 		this.nomFour = nomFour;
 		this.contactFour = contactFour;
 		this.numTelFour = numTelFour;
-		ajouterProduit(produit);
 	}
 
 	public String getNomFour() {
