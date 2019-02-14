@@ -8,7 +8,7 @@ public class Cheval {
 	private String race;
 	private String genre;
 	private Box box;
-	private ArrayList<Produit> listeProduit;
+	private ArrayList<Produit> listeProduit = new ArrayList<Produit>();
 	
 	
 	/** Constructeur cheval
@@ -19,12 +19,12 @@ public class Cheval {
 	 * @param box Box où habite le cheval
 	 * @param produit Produit équipant le cheval
 	 */
-	public Cheval(String nom, String race, String genre, Box box, ArrayList<Produit> listeProduit) {
+	public Cheval(String nom, String race, String genre, Box box, Produit produit) {
 		this.nom = nom;
 		this.race = race;
 		this.genre = genre;
 		this.box = box;
-		this.listeProduit = listeProduit;
+		ajouterProduit(produit);
 	}
 
 	//-----------------------------------------------------------------------------------------------------------
@@ -69,8 +69,17 @@ public class Cheval {
 		return listeProduit;
 	}
 	
+	
+	/** Getter sur le produit
+	 * @return le listeProduit
+	 */
+	public ArrayList<Produit> getListeProduit() {
+		return listeProduit;
+	}
+	
 	//-----------------------------------------------------------------------------------------------------------
 	
+
 	/** Setter sur le nom
 	 * 
 	 * @param nom Nom du cheval

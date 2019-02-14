@@ -9,7 +9,7 @@ public class Fournisseur {
 	private String nomFour;
 	private String contactFour;
 	private String numTelFour;
-	private ArrayList<Produit> listeProduit;
+	private ArrayList<Produit> listeProduit = new ArrayList<Produit>();
 	/**
 	 * constructeur de Fournisseur
 	 * @param nomFour
@@ -60,7 +60,7 @@ public class Fournisseur {
 	 * @param produit
 	 */
 	public void ajouterProduit(Produit produit) {
-		this.listeProduit.add(produit);
+		listeProduit.add(produit);
 	}
 	
 	/**

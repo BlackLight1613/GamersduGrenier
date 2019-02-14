@@ -19,9 +19,9 @@ public class Application
 			Fournisseur f2 = new Fournisseur ("New Generation Dada", "Karim", "0707070707");
 			
 			
-			Produit produit1 = new Produit("Hipposandale", 1,f1);
-			Produit produit2 = new Produit("Tapis",9,f1);
-			Produit produit3 = new Produit("Selle",3,f2);
+			Produit produit1 = new Produit("Hipposandale", 1);
+			Produit produit2 = new Produit("Tapis",9);
+			Produit produit3 = new Produit("Selle",3);
 			
 			f1.ajouterProduit(produit1);
 			f1.ajouterProduit(produit2);

@@ -7,7 +7,6 @@ public class Produit {
 	 */
 	private String nomProduit;
 	private int etatProduit;
-	private Fournisseur fournisseur;
 	
 	/**
 	 * Constructeur de Produit
@@ -15,11 +14,9 @@ public class Produit {
 	 * @param etat  
 	 * @param fournisseur
 	 */
-	public Produit(String nom, int etat, Fournisseur fournisseur) {
-		super();
+	public Produit(String nom, int etat) {
 		this.nomProduit = nom;
 		this.etatProduit = etat;
-		this.fournisseur = fournisseur;
 	}
 
 	public String getNom() {
@@ -30,10 +27,6 @@ public class Produit {
 		return etatProduit;
 	}
 
-	public Fournisseur getFournisseur() {
-		return fournisseur;
-	}
-
 	public void setNom(String nom) {
 		this.nomProduit = nom;
 	}
@@ -42,9 +35,6 @@ public class Produit {
 		this.etatProduit = etat;
 	}
 
-	public void setFournisseur(Fournisseur fournisseur) {
-		this.fournisseur = fournisseur;
-	}
 	
 	/**
 	 * affichage d'un message de presentation du produit
@@ -52,6 +42,6 @@ public class Produit {
 	@Override
 	public String toString()
 	{
-		return "Le produit: " +getNom()+" dans un etat: "+getEtat()+" "+getFournisseur();
+		return "Le produit: " +getNom()+" dans un etat: "+getEtat();
 	}
 }
