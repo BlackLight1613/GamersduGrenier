@@ -1,5 +1,10 @@
 package business;
 
+/**
+ * 
+ * @author Anthony
+ * Date : 14/02/2019
+ */
 public class Box
 {
 	private int numBox;
