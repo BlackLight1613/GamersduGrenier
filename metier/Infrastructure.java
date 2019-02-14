@@ -17,11 +17,12 @@ public class Infrastructure {
 	 * @param lieu Lieu de l'infrastructure
 	 * @param disponible Si l'infrastructure est disponible ou non
 	 */
-	public Infrastructure (String nom, String type, String lieu, boolean disponible) {
+	public Infrastructure (String nom, String type, String lieu, boolean disponible, Cours cours) {
 		this.nom = nom;
 		this.type = type;
 		this.lieu = lieu;
 		this.disponible = disponible;
+		this.cours = cours;
 	}
 
 	/**
@@ -52,6 +53,14 @@ public class Infrastructure {
 	public boolean isDisponible() {
 		return disponible;
 	}
+	
+	/**
+	 * 
+	 * @return le cours
+	 */
+	public Cours getCours() {
+		return cours;
+	}
 
 	/**
 	 * @param nom le nom à ajouter
@@ -80,6 +89,18 @@ public class Infrastructure {
 	 */
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
+	}
+
+	@Override
+	public String toString() {
+		String msg="";
+		msg = "L'infrastructure s'appelle " + nom + ", son type est " + type + ", elle se trouve =" + lieu + ", et elle est ";
+		if (disponible) {
+			msg = msg + "disponible.";
+		}
+		else {
+			msg = msg + "indisponible.";		}
+		return msg;
 	}
 	
 	

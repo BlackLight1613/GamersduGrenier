@@ -98,6 +98,13 @@ public class Cheval {
 		msg = "Le cheval marche au pas.";
 		return msg;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Le cheval s'appelle " + nom + ", sa race est " + race + " et son genre=" + genre;
+	}
+	
 	
 	
 
