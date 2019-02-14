@@ -2,6 +2,8 @@ package app;
 
 import java.time.LocalDate;
 
+import javax.swing.JOptionPane;
+
 import business.Box;
 import business.Cheval;
 import business.Cours;
@@ -15,13 +17,29 @@ public class Application
 	public static void main(String[] args) 
 	{
 	
-			Fournisseur f1 = new Fournisseur ("Cheval 3000","Guillaume", "0606060606");
-			Fournisseur f2 = new Fournisseur ("New Generation Dada", "Karim", "0707070707");
+			// Gestion des fournisseurs
+			String nomFou = JOptionPane.showInputDialog("Saisissez le nom de votre fournisseur : ");
+			String conFou = JOptionPane.showInputDialog("Saisissez le contact chez votre fournisseur : ");
+			String telFou = JOptionPane.showInputDialog("Saisissez le téléphone de votre fournisseur : ");
+			Fournisseur f1 = new Fournisseur (nomFou, conFou, telFou);
 			
+			nomFou = JOptionPane.showInputDialog("Saisissez le nom de votre fournisseur : ");
+			conFou = JOptionPane.showInputDialog("Saisissez le contact chez votre fournisseur : ");
+			telFou = JOptionPane.showInputDialog("Saisissez le téléphone de votre fournisseur : ");
+			Fournisseur f2 = new Fournisseur (nomFou, conFou, telFou);
 			
-			Produit produit1 = new Produit("Hipposandale", 1);
-			Produit produit2 = new Produit("Tapis",9);
-			Produit produit3 = new Produit("Selle",3);
+			// Gestion des produits
+			String nomPro = JOptionPane.showInputDialog("Saisissez le nom de votre produit : ");
+			int etaPro = Integer.parseInt(JOptionPane.showInputDialog("Saisissez l'état chez votre produit (un entier) : "));
+			Produit produit1 = new Produit(nomPro, etaPro);
+			
+			nomPro = JOptionPane.showInputDialog("Saisissez le nom de votre produit : ");
+			etaPro = Integer.parseInt(JOptionPane.showInputDialog("Saisissez l'état chez votre produit (un entier) : "));
+			Produit produit2 = new Produit(nomPro, etaPro);
+			
+			nomPro = JOptionPane.showInputDialog("Saisissez le nom de votre produit : ");
+			etaPro = Integer.parseInt(JOptionPane.showInputDialog("Saisissez l'état chez votre produit (un entier) : "));
+			Produit produit3 = new Produit(nomPro, etaPro);
 			
 			f1.ajouterProduit(produit1);
 			f1.ajouterProduit(produit2);
