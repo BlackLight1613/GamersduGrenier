@@ -1,10 +1,14 @@
 package metier;
 
+import metier.box;
+
+
 public class Cheval {
 	
 	private String nom;
 	private String race;
 	private String genre;
+	private Box box;
 	
 	
 	/** Constructeur cheval
@@ -13,10 +17,11 @@ public class Cheval {
 	 * @param race Race du cheval (Pur Sang Arabe, Camargue, Cob Normand...)
 	 * @param genre Genre du cheval (Hongre, étalon, jument)
 	 */
-	public Cheval(String nom, String race, String genre) {
+	public Cheval(String nom, String race, String genre, Box box) {
 		this.nom = nom;
 		this.race = race;
 		this.genre = genre;
+		this.box = box;
 	}
 
 	
@@ -43,6 +48,14 @@ public class Cheval {
 	public String getGenre() {
 		return genre;
 	}
+	
+	/** Getter sur le box
+	 * 
+	 * @return le box
+	 */
+	public Box getBox () {
+		return box;
+	}
 
 	/** Setter sur le nom
 	 * 
@@ -68,6 +81,18 @@ public class Cheval {
 		this.genre = genre;
 	}
 	
+	/** Setter sur le box
+	 * 
+	 * @param box le box à ajouter
+	 */
+	public void setBox(Box box) {
+		this.box = box;
+	}
+	
+	/** Méthode métier qui fait marcher le cheval
+	 * 
+	 * @return la manière de marcher du cheval
+	 */
 	public String marcher() {
 		String msg ="";
 		msg = "Le cheval marche au pas.";

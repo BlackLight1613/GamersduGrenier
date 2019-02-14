@@ -1,20 +1,26 @@
 package metier;
 
+import metier.cours;
+
 public class Infrastructure {
 	
 	private String nom;
 	private String type;
+	private String lieu;
 	private boolean disponible;
+	private Cours cours;
 	
 	/** Constructeur infrastructure 
 	 * 
 	 * @param nom Nom de l'infrastructure
 	 * @param type Type de l'infrastructure
+	 * @param lieu Lieu de l'infrastructure
 	 * @param disponible Si l'infrastructure est disponible ou non
 	 */
-	public Infrastructure (String nom, String type, boolean disponible) {
+	public Infrastructure (String nom, String type, String lieu, boolean disponible) {
 		this.nom = nom;
 		this.type = type;
+		this.lieu = lieu;
 		this.disponible = disponible;
 	}
 
@@ -31,6 +37,14 @@ public class Infrastructure {
 	public String getType() {
 		return type;
 	}
+	
+	/**
+	 * 
+	 * @return le lieu
+	 */
+	public String getLieu() {
+		return lieu;
+	}
 
 	/**
 	 * @return la disponibilité
@@ -40,17 +54,25 @@ public class Infrastructure {
 	}
 
 	/**
-	 * @param nom le nom à ajouté
+	 * @param nom le nom à ajouter
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
 	/**
-	 * @param type le type à ajouté
+	 * @param type le type à ajouter
 	 */
 	public void setType(String type) {
 		this.type = type;
+	}
+	
+	/**
+	 * 
+	 * @param lieu le lieu à ajouter
+	 */
+	public void setLieu(String lieu) {
+		this.lieu = lieu;
 	}
 
 	/**
