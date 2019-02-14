@@ -75,7 +75,7 @@ public class Fournisseur {
 		ArrayList<Produit> liste = getListeProduit();
 		 String results = "";
 		    for(Produit produit : liste) {
-		        results += produit.toString();
+		        results += produit.getNom() + "/n";
 		    }
 		    return results;
 	}
