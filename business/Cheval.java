@@ -6,6 +6,7 @@ public class Cheval {
 	private String race;
 	private String genre;
 	private Box box;
+	private Produit produit;
 	
 	
 	/** Constructeur cheval
@@ -13,13 +14,18 @@ public class Cheval {
 	 * @param nom Nom du cheval
 	 * @param race Race du cheval (Pur Sang Arabe, Camargue, Cob Normand...)
 	 * @param genre Genre du cheval (Hongre, étalon, jument)
+	 * @param box Box où habite le cheval
+	 * @param produit Produit équipant le cheval
 	 */
-	public Cheval(String nom, String race, String genre, Box box) {
+	public Cheval(String nom, String race, String genre, Box box, Produit produit) {
 		this.nom = nom;
 		this.race = race;
 		this.genre = genre;
+		this.box = box;
+		this.produit = produit;
 	}
 
+	//-----------------------------------------------------------------------------------------------------------
 	
 	/** Getter sur le nom
 	 * 
@@ -44,7 +50,25 @@ public class Cheval {
 	public String getGenre() {
 		return genre;
 	}
+	
+	/** Getter sur le box
+	 * 
+	 * @return le box
+	 */
+	public Box getBox() {
+		return box;
+	}
 
+	/** Getter sur le produit
+	 * 
+	 * @return le produit
+	 */
+	public Produit getProduit() {
+		return produit;
+	}
+	
+	//-----------------------------------------------------------------------------------------------------------
+	
 	/** Setter sur le nom
 	 * 
 	 * @param nom Nom du cheval
@@ -74,11 +98,33 @@ public class Cheval {
 		msg = "Le cheval marche au pas.";
 		return msg;
 	}
+	
+	
+	/** Setter sur le box
+	 * 
+	 * @param box Le box où va resider le cheval
+	 */
+	public void setBox(Box box) {
+		this.box = box;
+	}
+	
+	/** Setter sur le produit
+	 * 
+	 * @param produit Le produit équipant un cheval
+	 */
+	public void setProduit(Produit produit) {
+		this.produit = produit;
+	}
 
+	//-----------------------------------------------------------------------------------------------------------
 
+	
 	@Override
 	public String toString() {
-		return "Cheval [nom=" + nom + ", race=" + race + ", genre=" + genre + ", box=" + box + "]";
+		String msg ="";
+		msg = "Le cheval s'appelle " + nom + ", sa race est " + race + ", son genre est " + genre + ", son box est " + box 
+				+ " et il a pour produit " + produit;
+		return msg;
 	}
 	
 	
