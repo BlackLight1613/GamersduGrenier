@@ -16,11 +16,12 @@ public class Fournisseur {
 	 * @param contactFour
 	 * @param numTelFour
 	 */
-	public Fournisseur(String nomFour, String contactFour, String numTelFour) {
+	public Fournisseur(String nomFour, String contactFour, String numTelFour, Produit produit) {
 		super();
 		this.nomFour = nomFour;
 		this.contactFour = contactFour;
 		this.numTelFour = numTelFour;
+		ajouterProduit(produit);
 	}
 
 	public String getNomFour() {
@@ -70,6 +71,14 @@ public class Fournisseur {
 	public void supprimerProduit(Produit produit) {
 		this.listeProduit.add(produit);
 	}
+	public String afficherListeProduit() {
+		ArrayList<Produit> liste = getListeProduit();
+		 String results = "";
+		    for(Produit produit : liste) {
+		        results += produit.getNom() + "/n";
+		    }
+		    return results;
+	}
 
 	/**
 	 * affichage d'un message de presentation du produit
@@ -77,7 +86,9 @@ public class Fournisseur {
 	@Override
 	public String toString()
 	{
-		return "Le Fournisseur: " +getNomFour()+" contact: "+getContactFour()+" numero de telephone: "+getNumTelFour();
+		return "Le Fournisseur: " +getNomFour()+" contact: "+getContactFour()+" numero de telephone: "+getNumTelFour()+"/n"
+				+"Il vend les produits :"+afficherListeProduit()
+				;
 	}
 	
 }
