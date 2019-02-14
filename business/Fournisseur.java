@@ -50,7 +50,7 @@ public class Fournisseur {
 	@Override
 	public String toString()
 	{
-		return "Le Fournisseur: " +getNomFour()+" adresse: "+getContactFour()+" numero de telephone: "+getNumTelFour();
+		return "Le Fournisseur: " +getNomFour()+" contact: "+getContactFour()+" numero de telephone: "+getNumTelFour();
 	}
 	
 }

@@ -52,6 +52,6 @@ public class Produit {
 	@Override
 	public String toString()
 	{
-		return "Le produit: " +getNom()+" dans un etat: "+getEtat()+" du fournisseur: "+getFournisseur();
+		return "Le produit: " +getNom()+" dans un etat: "+getEtat()+" "+getFournisseur();
 	}
 }
