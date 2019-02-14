@@ -22,7 +22,34 @@ public class Cours
 	{
 		String jour ="";
 		
+		jour = date.getDayOfWeek().toString();
+		switch (jour)
+		{
+		case "MONDAY" : jour = "Lundi";
+						break;
+						
+		case "TUESDAY" : jour = "Mardi";
+		break;
 		
+		case "WEDNESDAY" : jour = "Mercredi";
+		break;
+		
+		case "THURSDAY" : jour = "Jeudi";
+		break;
+		
+		case "FRIDAY" : jour = "Jeudi";
+		break;
+		
+		case "SATURDAY" : jour = "Samedi";
+		break;
+		
+		case "SUNDAY" : jour = "Dimanche";
+		break;
+		
+		default : jour = "Inconnu";
+		break;
+		
+		}
 		
 		
 		return jour;
