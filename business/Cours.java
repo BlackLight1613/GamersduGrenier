@@ -1,7 +1,12 @@
 package business;
 
 import java.time.LocalDate;
-
+/**
+ * 
+ * 
+ * @author Eldin Anthony
+ *
+ */
 public class Cours 
 {
 	private Cheval cheval;
@@ -13,10 +18,21 @@ public class Cours
 		this.date=date;
 	}
 	
+	private String getJour(LocalDate date)
+	{
+		String jour ="";
+		
+		
+		
+		
+		return jour;
+		
+	}
+	
 	@Override
 	public String toString()
 	{
-		return "Le cours avec le cheval" +cheval.getNom()+ " a lieu le " +this.date.getDayOfWeek();
+		return "Le cours avec le cheval" + cheval.getNom()+ " a lieu le " +this.getJour(date);
 	}
 	
 }
