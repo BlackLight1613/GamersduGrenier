@@ -1,12 +1,14 @@
 package business;
 
+import java.util.ArrayList;
+
 public class Cheval {
 	
 	private String nom;
 	private String race;
 	private String genre;
 	private Box box;
-	private Produit produit;
+	private ArrayList<Produit> listeProduit;
 	
 	
 	/** Constructeur cheval
@@ -17,12 +19,12 @@ public class Cheval {
 	 * @param box Box où habite le cheval
 	 * @param produit Produit équipant le cheval
 	 */
-	public Cheval(String nom, String race, String genre, Box box, Produit produit) {
+	public Cheval(String nom, String race, String genre, Box box, ArrayList<Produit> listeProduit) {
 		this.nom = nom;
 		this.race = race;
 		this.genre = genre;
 		this.box = box;
-		this.produit = produit;
+		this.listeProduit = listeProduit;
 	}
 
 	//-----------------------------------------------------------------------------------------------------------
@@ -63,8 +65,8 @@ public class Cheval {
 	 * 
 	 * @return le produit
 	 */
-	public Produit getProduit() {
-		return produit;
+	public ArrayList<Produit> getProduit() {
+		return listeProduit;
 	}
 	
 	//-----------------------------------------------------------------------------------------------------------
@@ -112,18 +114,36 @@ public class Cheval {
 	 * 
 	 * @param produit Le produit équipant un cheval
 	 */
-	public void setProduit(Produit produit) {
-		this.produit = produit;
+	public void setProduit(ArrayList<Produit> listeProduit) {
+		this.listeProduit = listeProduit;
 	}
 
 	//-----------------------------------------------------------------------------------------------------------
 
+	/** Méthode qui ajoute un produit à la liste de produit du cheval
+	 * 
+	 * @param produit Le produit à ajouter à la liste des produits
+	 */
+	public void ajouterProduit(Produit produit) {
+		listeProduit.add(produit);
+	}
 	
+	/** Méthode qui supprime un produit de la liste de produit du cheval
+	 * 
+	 * @param produit Le produit à supprimer de la liste des produits
+	 */
+	public void supprimerProduit(Produit produit) {
+		listeProduit.remove(produit);
+	}
+	
+	/** Méthode d'affichage d'un cheval
+	 * 	
+	 */
 	@Override
 	public String toString() {
 		String msg ="";
 		msg = "Le cheval s'appelle " + nom + ", sa race est " + race + ", son genre est " + genre + ", son box est " + box 
-				+ " et il a pour produit " + produit;
+				+ " et il a pour produits " + listeProduit;
 		return msg;
 	}
 	
