@@ -74,7 +74,7 @@ public class Fournisseur {
 		ArrayList<Produit> liste = getListeProduit();
 		 String results = "";
 		    for(Produit produit : liste) {
-		        results += produit.getNom() + "/n";
+		        results += produit.getNom() + "\n";
 		    }
 		    return results;
 	}
@@ -85,7 +85,7 @@ public class Fournisseur {
 	@Override
 	public String toString()
 	{
-		return "Le Fournisseur: " +getNomFour()+" contact: "+getContactFour()+" numero de telephone: "+getNumTelFour()+"/n"
+		return "Le Fournisseur: " +getNomFour()+" contact: "+getContactFour()+" numero de telephone: "+getNumTelFour()+"\n"
 				+"Il vend les produits :"+afficherListeProduit()
 				;
 	}
