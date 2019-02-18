@@ -1,1 +1,2 @@
-Salut les gars. J'ai rajouté un fichier texte à la racine de votre projet.
+﻿Salut les gars. J'ai rajouté un fichier texte à la racine de votre projet.
+On test un nouveau truc.
